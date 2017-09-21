@@ -2,11 +2,11 @@ def firstDuplicate(a):
     '''Finds first duplicate number for which the second occurrence has the minimal index
     Uses O(n) time complexity and O(1) space complexity
 
-    >>> a = [1, 2, 3, 3, 4, 2]
+    >>> firstDuplicate([1, 2, 3, 3, 4, 2])
     3
 
-    If there are no duplicates, return a -1
-    >>> a = [1]
+    If there are no duplicates, return -1
+    >>> firstDuplicate([1])
     -1
     '''
     
