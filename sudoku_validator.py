@@ -24,6 +24,15 @@ The problem is from Codefights
     >>> sudoku2(grid)
     True
 '''
+grid = [['.', '.', '.', '1', '4', '.', '.', '2', '.'],
+                ['.', '.', '6', '.', '.', '.', '.', '.', '.'],
+                ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+                ['.', '.', '1', '.', '.', '.', '.', '.', '.'],
+                ['.', '6', '7', '.', '.', '.', '.', '.', '9'],
+                ['.', '.', '.', '.', '.', '.', '8', '1', '.'],
+                ['.', '3', '.', '.', '.', '.', '.', '.', '6'],
+                ['.', '.', '.', '.', '.', '7', '.', '.', '.'],
+                ['.', '.', '.', '5', '.', '.', '.', '7', '.']]
 
 def sudoku2(grid):
     squares = defaultdict(set)
@@ -63,6 +72,7 @@ def sudoku2(grid):
     return True
 
 if __name__ == "__main__":
-    import doctest
+    sudoku2(grid)
+    # import doctest
     # if doctest.testmod().failed == 0:
     #     print "\n*** ALL TESTS PASSED;\n"
