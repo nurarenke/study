@@ -25,6 +25,7 @@ def get_biggest_region(grid):
                 
                 print "1 @  ", row, col
                 neighbor_cells = set()
+                print "neighbor_cells before", neighbor_cells
                 
                 for neighbor_row in xrange(row-1, row+2):
                     for neighbor_col in xrange(col-1, col+2):
@@ -34,8 +35,11 @@ def get_biggest_region(grid):
                         if neighbor_row < num_rows and neighbor_row >= 0 and neighbor_col < num_cols and neighbor_col >= 0:
                             if grid[neighbor_row][neighbor_col] == 1:
                                 neighbor_cells.add((neighbor_row, neighbor_col))
-               
+                                print "neighbor_cells added", neighbor_cells
+            
+            print "neighbor_cell all finished", neighbor_cells  
             added_to_existing = False
+            print "set of cells before", sets_of_cells
             for set_of_cells in sets_of_cells:
                 if not set_of_cells.isdisjoint(neighbor_cells):
                     set_of_cells.update(neighbor_cells)
