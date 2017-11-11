@@ -19,7 +19,8 @@ def in_every_list(numbers):
     num_list_index = {}
     
     num_to_print = []
-    
+
+    # create a dict of the numbers as keys and the list in index as values
     for index, num_list in enumerate(numbers):
         for num in num_list:
             if num in num_list_index.keys():
@@ -27,10 +28,10 @@ def in_every_list(numbers):
                 
             else:
                 num_list_index[num] = set([index])
-                
+    
+    # if the number has the same number as the lengths of the array of arrays,
+    # then it appears in every list           
     for num, list_index in num_list_index.items():
-        print "num", num
-        print "list_index", list_index
         if len(list_index) == length_of_numbers:
             num_to_print.append(num)
 
